@@ -54,7 +54,11 @@ class _UserFormState extends State<UserForm> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.lightBlue,
-        title: const Text('Formulario de cliente'),
+        title: const Text('Formulario de cliente', 
+        style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),),
         actions: <Widget>[
           IconButton(
             onPressed: () {
@@ -98,6 +102,7 @@ class _UserFormState extends State<UserForm> {
         child: ListView(
           children: [
             Form(
+              key: _form,
                 child: Column(
               children: <Widget>[
                 TextFormField(
@@ -108,7 +113,151 @@ class _UserFormState extends State<UserForm> {
                     }
                   },
                   onSaved: (value) => _formData['nome'] = value!,
-                )
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'CPF'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Cpf inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['CPF'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'RG'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'RG inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['RG'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Telefone'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Telefone inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['telefone'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Vendedor'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Vendedo inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['vendedor'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'CEP'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Cep inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['cep'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Logradouro'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Logradouro inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['logradouro'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Nº'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Nº inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['numero'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Complemento'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Complemento inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['complemento'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Bairro'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Bairro inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['bairro'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Cidade'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Cidade inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['cidade'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'UF'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'UF inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['UF'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Valor de entrada'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Valor de entrada inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['entrada'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Proximo pagamento (yyyy-mm-dd)'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Proximo pagamento inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['proxPag'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Forma de pagamento (Semanal, Quinzenal, Mensal)'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Forma de pagamento inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['formPag'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Tipo de pagamento (Dinheiro, Cartão, Pix)'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Tipo de pagamento inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['tipoPag'] = value!,
+                ),
+                TextFormField(
+                  decoration: InputDecoration(labelText: 'Total'),
+                  validator: (value) {
+                    if (value == null || value.trim().isEmpty) {
+                      return 'Total inválido';
+                    }
+                  },
+                  onSaved: (value) => _formData['total'] = value!,
+                ),
               ],
             )),
           ],
