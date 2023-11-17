@@ -62,4 +62,11 @@ class ClientModel {
       ),
     );
   }
+
+  Object? toMap() {}
+
+  post(
+      {required String url,
+      required Map<String, String> headers,
+      required String body}) {}
 }
