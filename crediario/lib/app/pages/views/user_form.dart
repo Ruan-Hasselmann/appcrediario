@@ -63,14 +63,12 @@ class _UserFormState extends State<UserForm> {
               if (isValid) {
                 _form.currentState!.save();
                 ClientModel(
-                  id: int.parse(_formData['id']!),
                   nome: _formData['nome'].toString(),
                   cpf: _formData['CPF'].toString(),
                   rg: _formData['RG'].toString(),
                   telefone: _formData['telefone'].toString(),
                   vendedor: _formData['vendedor'].toString(),
                   endereco: EnderecoModel(
-                      id: int.parse(_formData['id']!),
                       cep: _formData['cep'].toString(),
                       logradouro: _formData['logradouro'].toString(),
                       numero: _formData['numero'].toString(),
@@ -79,7 +77,6 @@ class _UserFormState extends State<UserForm> {
                       estado: _formData['UF'].toString(),
                       complemento: _formData['complemento'].toString()),
                   pagamento: PagamentoModel(
-                    id: int.parse(_formData['id']!),
                     dataProximo: _formData['proxPag'].toString(),
                     entrada: double.parse(_formData['entrada'].toString()),
                     formaPagamento: _formData['formPag'].toString(),

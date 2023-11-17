@@ -1,5 +1,5 @@
 class EnderecoModel {
-  final int id;
+  final int? id;
   final String bairro;
   final String cep;
   final String cidade;
@@ -9,7 +9,7 @@ class EnderecoModel {
   final String numero;
 
   EnderecoModel({
-    required this.id,
+    this.id,
     required this.bairro,
     required this.cep,
     required this.cidade,

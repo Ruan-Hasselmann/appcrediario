@@ -1,5 +1,5 @@
 class PagamentoModel {
-  final int id;
+  final int? id;
   final String dataProximo;
   final String? dataVenda;
   final double entrada;
@@ -10,7 +10,7 @@ class PagamentoModel {
   final double? totalPago;
 
   PagamentoModel({
-    required this.id,
+    this.id,
     required this.dataProximo,
     this.dataVenda,
     required this.entrada,

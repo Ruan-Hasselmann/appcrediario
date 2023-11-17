@@ -2,7 +2,7 @@ import 'package:crediario/app/data/models/endereco_model.dart';
 import 'package:crediario/app/data/models/pagamento_model.dart';
 
 class ClientModel {
-  final int id;
+  final int? id;
   final String cpf;
   final String? dataCadastro;
   final String nome;
@@ -14,7 +14,7 @@ class ClientModel {
   final PagamentoModel pagamento;
 
   ClientModel({
-    required this.id,
+    this.id,
     required this.cpf,
     this.dataCadastro,
     required this.nome,
